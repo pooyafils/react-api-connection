@@ -15,6 +15,7 @@ const Nav =()=>{
     </Link>
     <Link to="/PersonInfoGettingDataFromServer"><li><a>PersonInfoGettingDataFromServer</a></li></Link>
     <Link to="/PersonInfoWithClassAndFetch "><li><a>PersonInfoWithClassAndFetch</a></li></Link>
+    <Link to="/PersonInfoWithClassAndFetchOtherExample"><li><a>PersonInfoWithClassAndFetchOtherExample</a></li></Link>
 </ul>
         </div>
     )

@@ -4,6 +4,7 @@ import{BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import PersonInfoGettingDataFromServer from './component/get/PersonInfoGettingDataFromServer'
 import SinglePersonInfoGettingFormServerAxios from './component/get/SinglePersonInfoGettingFormServerAxios'
 import PersonInfoWithClassAndFetch from './component/get/PersonInfoWithClassAndFetch'
+import PersonInfoWithClassAndFetchOtherExample from './component/get/PersonInfoWithClassAndFetchOtherExample'
 class App extends Component{
 
 //SinglePersonInfoGettingFormServerAxios
@@ -16,7 +17,7 @@ class App extends Component{
                     <Route path="/PersonInfoWithClassAndFetch " component={PersonInfoWithClassAndFetch}/>
                     <Route path="/SinglePersonInfoGettingFormServerAxios"  component={SinglePersonInfoGettingFormServerAxios}/>
                     <Route path="/PersonInfoGettingDataFromServer" component={PersonInfoGettingDataFromServer}/>
-
+                    <Route path="/PersonInfoWithClassAndFetchOtherExample" component={PersonInfoWithClassAndFetchOtherExample}/>
 
                 </Switch>
             </Router>
