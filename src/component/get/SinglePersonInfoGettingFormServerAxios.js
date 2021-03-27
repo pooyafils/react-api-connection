@@ -18,6 +18,8 @@ const SinglePersonInfoGettingFormServerAxios=()=>{
 
     return(
         <div>
+            <input text="text" value={id} onChange={e=> setId(e.target.value)}/>
+
             {personAxios.name}
             {personAxios.familyName}
         </div>
