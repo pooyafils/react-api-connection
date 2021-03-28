@@ -13,7 +13,7 @@ const PersonInfoGettingDataFromServer=()=>{
     }
     return(
         <div>
-
+lllllllll
             {person.map(
                 (r,id)=>(
                     <PersonInfoData key={id} id={r.id} name={r.name} familyName={r.familyName}/>

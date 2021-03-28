@@ -10,7 +10,7 @@ const PersonInfoGettingFromServerAxios=()=>{
             setPersonAxios(res.data)}
             )
             )
-        }
+        },[]
     )
     
     return(

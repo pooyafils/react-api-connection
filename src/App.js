@@ -10,6 +10,7 @@ import PersonInfoGettingFromServerAxios from './component/get/PersonInfoGettingF
 import PersonInfoDetail from './component/get/PersonInfoDetail'
 import PersonInfoWithAxiosConsole from './component/get/PersonInfoWithAxiosConsole'
 import PersonInfoConsole from './component/get/PersonInfoConsole'
+import PersonInfoDataDelete from './component/delete/DeletePersonInfo'
 class App extends Component{
 
 //SinglePersonInfoGettingFormServerAxios
@@ -28,6 +29,7 @@ class App extends Component{
                     <Route path="/PersonInfoGettingDataFromServer" component={PersonInfoGettingDataFromServer}/>
                     <Route path="/PersonInfoWithClassAndFetchOtherExample" component={PersonInfoWithClassAndFetchOtherExample}/>
                     <Route path="/SinglePersonInfoGettingFormServerAxiosInputStyle" component={SinglePersonInfoGettingFormServerAxiosInputStyle}/>
+                    <Route path="/PersonInfoDataDelete" component={PersonInfoDataDelete}/>
                 </Switch>
             </Router>
         </div>

@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 
 const PersonInfoDetail =({match})=>{
     const [personAxios,setPersonAxios]=useState([])
+
     useEffect(
         ()=>{
             fetchItem()
