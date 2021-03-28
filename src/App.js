@@ -8,6 +8,8 @@ import PersonInfoWithClassAndFetchOtherExample from './component/get/PersonInfoW
 import SinglePersonInfoGettingFormServerAxiosInputStyle from './component/get/SinglePersonInfoGettingFormServerAxiosInputStyle'
 import PersonInfoGettingFromServerAxios from './component/get/PersonInfoGettingFromServerAxios'
 import PersonInfoDetail from './component/get/PersonInfoDetail'
+import PersonInfoWithAxiosConsole from './component/get/PersonInfoWithAxiosConsole'
+import PersonInfoConsole from './component/get/PersonInfoConsole'
 class App extends Component{
 
 //SinglePersonInfoGettingFormServerAxios
@@ -17,6 +19,8 @@ class App extends Component{
            <Router>
                 <Nav/>
                 <Switch>
+                    <Route path="/PersonInfoConsole" component={PersonInfoConsole}/>
+                    <Route path="/PersonInfoWithAxiosConsole" component={PersonInfoWithAxiosConsole}/>
                     <Route  path="/maininfo/:id" component={ PersonInfoDetail}/>
                     <Route path="/maininfo" component={PersonInfoGettingFromServerAxios}/>
                     <Route path="/PersonInfoWithClassAndFetch " component={PersonInfoWithClassAndFetch}/>

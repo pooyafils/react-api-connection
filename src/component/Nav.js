@@ -10,10 +10,10 @@ const Nav =()=>{
     return(
         <div className="container">
 <ul className="list-unstyled">
-    <Link to="/SinglePersonInfoGettingFormServerAxios">
-        <li><a>SinglePersonInfoGettingFormServerAxios</a></li>
-    </Link>
-    <Link to="/maininfo"><li><a>PersonInfoGettingFromServerAxios0000</a></li></Link>
+    <Link to="/SinglePersonInfoGettingFormServerAxios"><li><a>SinglePersonInfoGettingFormServerAxios</a></li></Link>
+    <Link to="/PersonInfoConsole"><li><a>PersonInfoConsole</a></li></Link>
+    <Link to="/PersonInfoWithAxiosConsole"><li><a>PersonInfoWithAxiosConsole</a></li></Link>
+    <Link to="/maininfo"><li><a>PersonInfoGettingFromServerAxiosLinkToOtherComponent</a></li></Link>
     <Link to="/PersonInfoGettingDataFromServer"><li><a>PersonInfoGettingDataFromServer</a></li></Link>
     <Link to="/PersonInfoWithClassAndFetch "><li><a>PersonInfoWithClassAndFetch</a></li></Link>
     <Link to="/PersonInfoWithClassAndFetchOtherExample"><li><a>PersonInfoWithClassAndFetchOtherExample</a></li></Link>
