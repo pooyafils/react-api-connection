@@ -19,6 +19,7 @@ const Nav =()=>{
     <Link to="/PersonInfoWithClassAndFetchOtherExample"><li><a>PersonInfoWithClassAndFetchOtherExample</a></li></Link>
     <Link to="/SinglePersonInfoGettingFormServerAxiosInputStyle"><li><a>SinglePersonInfoGettingFormServerAxiosInputStyle</a></li></Link>
     <Link to="/PersonInfoDataDelete"><li><a>PersonInfoDataDelete</a></li></Link>
+    <Link to="/PostPersonInformation"><li><a>PostPersonInformation</a></li></Link>
 </ul>
         </div>
     )

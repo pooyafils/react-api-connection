@@ -3,6 +3,7 @@ import PersonInfoDataDelete from "./DeletePersonInfoDataDelete";
 import axios from "axios";
 
 const DeletePersonInfo=()=>{
+
     const [person,setPerson]=useState([])
     useEffect(
         ()=>{loadData()
