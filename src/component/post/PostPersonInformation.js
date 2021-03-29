@@ -13,6 +13,8 @@ const PostPersonInformation=()=>{
 
         ()=>{loadData()
         },
+        ()=>{add()
+        },
         []
     )
 
@@ -37,7 +39,6 @@ const PostPersonInformation=()=>{
             }
         ).then((respone)=>{
             status=respone.status
-
                  return respone.json()
 
         }
@@ -45,6 +46,7 @@ const PostPersonInformation=()=>{
                 if(status===200){
                     console.log('400')
                     setResponse(responseJson)
+                    setPerson(responseJson)
                     console.log(Response,'llllloooollll')
                     console.log(responseJson,"kkkkkkkkkkkkkkkkkkkk")
                 }
