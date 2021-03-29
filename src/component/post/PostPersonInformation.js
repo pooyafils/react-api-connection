@@ -4,13 +4,16 @@ import PersonInfoDataDelete from "../delete/DeletePersonInfoDataDelete";
 import PersonInformation from "./PersonInformation";
 
 const PostPersonInformation=()=>{
-    const [name,setName]=useState([])
-    const [familyName,setFamilyname]=useState([])
+    const [name,setName]=useState('')
+    const [familyName,setFamilyname]=useState('')
     const [person,setPerson]=useState([])
+    const [Response,setResponse]=useState([])
 
     useEffect(
+
         ()=>{loadData()
-        },[]
+        },
+        []
     )
 
     const loadData=async()=>{
@@ -18,21 +21,39 @@ const PostPersonInformation=()=>{
         const data=await response.json();
         setPerson(data)
     }
+    let status
     const add=()=>{
         console.log(name,'this is family name',familyName);
-        fetch('http://localhost:8080/person',{
+         fetch('http://localhost:8080/person',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(
                 {
                     name:name,
                     familyName:familyName
+
                 }
             )
             }
+        ).then((respone)=>{
+            status=respone.status
 
-        ).then((respone=>{return respone.json()})
-            ).then((responseJson=>{console.log(responseJson)}))
+                 return respone.json()
+
+        }
+            ).then((responseJson)=>{
+                if(status===200){
+                    console.log('400')
+                    setResponse(responseJson)
+                    console.log(Response,'llllloooollll')
+                    console.log(responseJson,"kkkkkkkkkkkkkkkkkkkk")
+                }
+
+            }
+        )
+
+
+
     }
     return(
         <div>
@@ -47,6 +68,7 @@ const PostPersonInformation=()=>{
                 <input value={familyName} onChange={(e)=>setFamilyname(e.target.value)} className="input-group"/>
                 <button onClick={add} className="btn btn-info">add</button>
             </div>
+            {Response.codes}
         </div>
     )
 
