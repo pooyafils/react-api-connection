@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import PersonInformation from "../post/PersonInformation";
 import EditPerson from "./EditPerson";
+import axios from "axios";
 
 const EditPersonInfo=()=>{
     const [name,setName]=useState('')
@@ -58,8 +59,18 @@ const EditPersonInfo=()=>{
 
 
     }
-    const onUpdates=(id)=>{
-        console.log(id,'this is the id')
+    const onUpdates=()=>{
+        console.log(idnameEdit,'this is the id',nameEdit)
+        axios("http://localhost:8080/person/"+idnameEdit,{
+method:'PUT',
+            headers:{'Content-Type':'application/json'},
+            data:{name:nameEdit}
+        }
+
+        ).then(
+            (response)=>{console.log(response)}
+        )
+
     }
     return(
         <div>
@@ -80,7 +91,7 @@ const EditPersonInfo=()=>{
             <div className="container border border-info">
                 <p>this is the edit section</p>
                 <input value={nameEdit} onChange={(e)=>setNameEdit(e.target.value)} className="input-group"/>
-                <button onClick={add} className="btn btn-info">edit</button>
+                <button onClick={onUpdates} className="btn btn-info">edit</button>
                 {Response.codes}
             </div>
         </div>
