@@ -10,6 +10,7 @@ const EditPersonInfo=()=>{
     const [Response,setResponse]=useState([])
     const[nameEdit,setNameEdit]=useState('')
     const[idnameEdit,setIdNameEdit]=useState(1)
+    const[err,setErr]=useState('')
 
     useEffect(
 
@@ -67,8 +68,15 @@ method:'PUT',
             data:{name:nameEdit}
         }
 
-        ).then(
-            (response)=>{console.log(response)}
+
+        ).then((responseJson)=>{
+                    console.log('400')
+                    setPerson(responseJson.data)
+                    console.log(responseJson,"kkkkkkkkkkkkkkkkkkkk")
+            }
+        ).catch(
+            (e)=>{console.log(e.toString())},
+            setErr('KKK')
         )
 
     }
@@ -93,6 +101,7 @@ method:'PUT',
                 <input value={nameEdit} onChange={(e)=>setNameEdit(e.target.value)} className="input-group"/>
                 <button onClick={onUpdates} className="btn btn-info">edit</button>
                 {Response.codes}
+                <h1>{err}</h1>
             </div>
         </div>
     )
