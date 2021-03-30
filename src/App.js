@@ -12,6 +12,7 @@ import PersonInfoWithAxiosConsole from './component/get/PersonInfoWithAxiosConso
 import PersonInfoConsole from './component/get/PersonInfoConsole'
 import PersonInfoDataDelete from './component/delete/DeletePersonInfo'
 import PostPersonInformation from './component/post/PostPersonInformation'
+import EditPerson from './component/put/EditPersonInfo'
 class App extends Component{
 
 //SinglePersonInfoGettingFormServerAxios
@@ -32,6 +33,7 @@ class App extends Component{
                     <Route path="/SinglePersonInfoGettingFormServerAxiosInputStyle" component={SinglePersonInfoGettingFormServerAxiosInputStyle}/>
                     <Route path="/PersonInfoDataDelete" component={PersonInfoDataDelete}/>
                     <Route path="/PostPersonInformation" component={PostPersonInformation}/>
+                    <Route path="/EditPerson" component={EditPerson}/>
                 </Switch>
             </Router>
         </div>
