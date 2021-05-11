@@ -4,7 +4,6 @@ const EditPerson=(props)=>{
 
     return(
         <div>
-            this is edit person
             <table>
                 <tr>
                     <td>{props.id}</td>

@@ -73,10 +73,11 @@ method:'PUT',
                     console.log('400')
                     setPerson(responseJson.data)
                     console.log(responseJson,"kkkkkkkkkkkkkkkkkkkk")
+            setErr('np')
             }
         ).catch(
             (e)=>{console.log(e.toString())},
-            setErr('KKK')
+            setErr('you must enter the name also more than 4 charters')
         )
 
     }
